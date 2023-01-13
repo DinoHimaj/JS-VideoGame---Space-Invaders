@@ -1,22 +1,19 @@
-export default class Enemy {
-  constructor(x, y, imageNumber) {
+export default class Bullet {
+  constructor(canvas, x, y, velocity, bulletColor) {
+    this.canvas = canvas;
     this.x = x;
     this.y = y;
-    //44x32 are the dimensions of the image
-    this.width = 44;
-    this.height = 32;
+    this.velocity = velocity;
+    this.bulletColor = bulletColor;
 
-    this.image = new Image();
-    this.image.src = `images/enemy${imageNumber}.png`;
+    this.width = 5;
+    this.height = 20;
   }
 
   draw(ctx) {
-    ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-  }
-
-  move(xVelocity, yVelocity) {
-    this.x += xVelocity;
-    this.y += yVelocity;
+    this.y -= this.velocity; //from down to up
+    ctx.fillStyle = this.bulletColor;
+    ctx.fillRect(this.x, this.y, this.width, this.height);
   }
 
   //https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
