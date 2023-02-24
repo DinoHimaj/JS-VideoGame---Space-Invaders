@@ -1,6 +1,6 @@
 # Space Invaders Game
 
-This is a Space Invaders game developed using HTML, CSS, and JavaScript with the Canvas API. The objective of the game is to shoot down all the invading aliens before they reach the bottom of the screen.
+This is a Space Invaders game developed using HTML, CSS, and JavaScript using Canvas. The objective of the game is to shoot down all the invading aliens before they reach the bottom of the screen.
 
 ## Game Controls
 
